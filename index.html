@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Making Waves Initiative Dashboard 🌊</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>🌊 Making Waves Initiative Dashboard</h1>
+        <p>Empowering Coastal Women Through Sustainable Blue Economy</p>
+    </div>
+
+    <div class="container">
+        <!-- Key Metrics -->
+        <div class="dashboard-grid">
+            <div class="card metric-card">
+                <h3>👥 Total Target</h3>
+                <div class="metric-value">11,000</div>
+                <div class="metric-label">Women to Empower by 2030</div>
+            </div>
+            
+            <div class="card metric-card">
+                <h3>📈 Current Progress</h3>
+                <div class="metric-value">28</div>
+                <div class="metric-label">Women Currently Engaged</div>
+            </div>
+            
+            <div class="card metric-card">
+                <h3>💰 Monthly Revenue</h3>
+                <div class="metric-value">KES 1.6M</div>
+                <div class="metric-label">From Pilot CBO</div>
+            </div>
+            
+            <div class="card metric-card">
+                <h3>🚢 Infrastructure</h3>
+                <div class="metric-value">1</div>
+                <div class="metric-label">Offshore Fishing Boat</div>
+            </div>
+        </div>
+
+        <!-- Progress Tracking -->
+        <div class="card">
+            <h3>📊 Overall Progress to 2030 Goal</h3>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 0.25%"></div>
+            </div>
+            <p>28 out of 11,000 women empowered (0.25% complete)</p>
+            <div class="chart-container">
+                <canvas id="progressChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Financial Overview -->
+        <div class="dashboard-grid">
+            <div class="card">
+                <h3>💼 CBO Financial Breakdown</h3>
+                <div class="chart-container">
+                    <canvas id="financialChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>🎯 Profit Distribution</h3>
+                <div class="chart-container">
+                    <canvas id="profitChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Capacity Building -->
+        <div class="card">
+            <h3>🎓 Training & Capacity Building</h3>
+            <div class="chart-container large-chart">
+                <canvas id="trainingChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline">
+            <h3>📅 Implementation Timeline & Future Plans</h3>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2025</div>
+                <div class="timeline-content">
+                    <strong>🚀 Pilot Phase Completion</strong>
+                    <p>Coastal Women CBO empowered with offshore fishing boat, 28 women engaged</p>
+                </div>
+                <span class="status-badge completed">Completed</span>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2026</div>
+                <div class="timeline-content">
+                    <strong>📈 Scale within Kenya</strong>
+                    <p>Expand to 10 additional BMUs, target 2,200 women empowered</p>
+                </div>
+                <span class="status-badge planned">Planned</span>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2027</div>
+                <div class="timeline-content">
+                    <strong>🌍 Regional Expansion</strong>
+                    <p>Launch in Uganda and Rwanda, introduce mariculture activities</p>
+                </div>
+                <span class="status-badge planned">Planned</span>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2028</div>
+                <div class="timeline-content">
+                    <strong>🏝️ Ecotourism Integration</strong>
+                    <p>Expand to Burundi and DRC Congo, add ecotourism value chains</p>
+                </div>
+                <span class="status-badge planned">Planned</span>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2029</div>
+                <div class="timeline-content">
+                    <strong>🎯 Final Expansion</strong>
+                    <p>Enter South Sudan market, comprehensive blue economy approach</p>
+                </div>
+                <span class="status-badge planned">Planned</span>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2030</div>
+                <div class="timeline-content">
+                    <strong>🏆 Goal Achievement</strong>
+                    <p>11,000 women empowered across 6 countries through sustainable blue economy</p>
+                </div>
+                <span class="status-badge planned">Target</span>
+            </div>
+        </div>
+
+        <!-- Regional Expansion -->
+        <div class="card">
+            <h3>🌍 Regional Expansion Plan</h3>
+            <div class="country-grid">
+                <div class="country-card">
+                    <div class="country-flag">🇰🇪</div>
+                    <h4>Kenya</h4>
+                    <p><strong>Status:</strong> Active</p>
+                    <p><strong>Women:</strong> 28 (Pilot)</p>
+                </div>
+                
+                <div class="country-card">
+                    <div class="country-flag">🇺🇬</div>
+                    <h4>Uganda</h4>
+                    <p><strong>Status:</strong> 2027 Launch</p>
+                    <p><strong>Focus:</strong> Lake Fisheries</p>
+                </div>
+                
+                <div class="country-card">
+                    <div class="country-flag">🇷🇼</div>
+                    <h4>Rwanda</h4>
+                    <p><strong>Status:</strong> 2027 Launch</p>
+                    <p><strong>Focus:</strong> Aquaculture</p>
+                </div>
+                
+                <div class="country-card">
+                    <div class="country-flag">🇧🇮</div>
+                    <h4>Burundi</h4>
+                    <p><strong>Status:</strong> 2028 Launch</p>
+                    <p><strong>Focus:</strong> Lake Tanganyika</p>
+                </div>
+                
+                <div class="country-card">
+                    <div class="country-flag">🇨🇩</div>
+                    <h4>DRC Congo</h4>
+                    <p><strong>Status:</strong> 2028 Launch</p>
+                    <p><strong>Focus:</strong> River Systems</p>
+                </div>
+                
+                <div class="country-card">
+                    <div class="country-flag">🇸🇸</div>
+                    <h4>South Sudan</h4>
+                    <p><strong>Status:</strong> 2029 Launch</p>
+                    <p><strong>Focus:</strong> Nile Fisheries</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blue Economy Activities -->
+        <div class="card">
+            <h3>🌊 Blue Economy Activities</h3>
+            <div class="activities-grid">
+                <div class="activity-item">
+                    <span class="activity-icon">🎣</span>
+                    <h4>Offshore Fishing</h4>
+                    <p>Sustainable fishing beyond coral reefs</p>
+                </div>
+                
+                <div class="activity-item">
+                    <span class="activity-icon">🦐</span>
+                    <h4>Mariculture</h4>
+                    <p>Seaweed farming & shellfish cultivation</p>
+                </div>
+                
+                <div class="activity-item">
+                    <span class="activity-icon">🏖️</span>
+                    <h4>Ecotourism</h4>
+                    <p>Community-based coastal tourism</p>
+                </div>
+                
+                <div class="activity-item">
+                    <span class="activity-icon">🏭</span>
+                    <h4>Value Addition</h4>
+                    <p>Fish processing & preservation</p>
+                </div>
+                
+                <div class="activity-item">
+                    <span class="activity-icon">🚚</span>
+                    <h4>Cold Chain</h4>
+                    <p>Storage & transportation infrastructure</p>
+                </div>
+                
+                <div class="activity-item">
+                    <span class="activity-icon">💼</span>
+                    <h4>Entrepreneurship</h4>
+                    <p>Business development & market access</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Year by Year Targets -->
+        <div class="card">
+            <h3>📈 Annual Empowerment Targets</h3>
+            <div class="chart-container large-chart">
+                <canvas id="yearlyTargetsChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
