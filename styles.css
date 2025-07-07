@@ -6,17 +6,51 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    background: linear-gradient(135deg, #4ECDC4 0%, #26A69A 50%, #1565C0 100%);
     color: #333;
     min-height: 100vh;
 }
 
 .header {
-    background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+    background: linear-gradient(135deg, #00BCD4 0%, #26A69A 50%, #1565C0 100%);
     color: white;
     padding: 2rem;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.logo-image {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+.header-text {
+    text-align: left;
 }
 
 .header h1 {
@@ -49,15 +83,16 @@ body {
     padding: 2rem;
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid #26A69A;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 35px rgba(38, 166, 154, 0.2);
 }
 
 .card h3 {
-    color: #0066cc;
+    color: #1565C0;
     margin-bottom: 1rem;
     font-size: 1.4rem;
     display: flex;
@@ -66,9 +101,10 @@ body {
 }
 
 .metric-card {
-    background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+    background: linear-gradient(135deg, #00BCD4 0%, #26A69A 50%, #1565C0 100%);
     color: white;
     text-align: center;
+    border-top: none;
 }
 
 .metric-card h3 {
@@ -116,7 +152,7 @@ body {
 }
 
 .progress-fill {
-    background: linear-gradient(90deg, #00cc66 0%, #0099cc 100%);
+    background: linear-gradient(90deg, #00BCD4 0%, #26A69A 50%, #1565C0 100%);
     height: 100%;
     border-radius: 10px;
     transition: width 1s ease-in-out;
@@ -128,6 +164,7 @@ body {
     padding: 2rem;
     margin: 2rem 0;
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-top: 4px solid #26A69A;
 }
 
 .timeline-item {
@@ -140,11 +177,11 @@ body {
 }
 
 .timeline-item:hover {
-    background: #f8f9ff;
+    background: linear-gradient(135deg, rgba(0, 188, 212, 0.1) 0%, rgba(38, 166, 154, 0.1) 100%);
 }
 
 .timeline-year {
-    background: #0066cc;
+    background: linear-gradient(135deg, #26A69A 0%, #1565C0 100%);
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -158,6 +195,13 @@ body {
     flex: 1;
 }
 
+.cost-info {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
 .status-badge {
     padding: 0.3rem 0.8rem;
     border-radius: 15px;
@@ -167,23 +211,23 @@ body {
 }
 
 .completed {
-    background: #d4edda;
-    color: #155724;
+    background: #C8E6C9;
+    color: #2E7D32;
 }
 
 .in-progress {
-    background: #fff3cd;
-    color: #856404;
+    background: #FFE0B2;
+    color: #F57C00;
 }
 
 .planned {
-    background: #cce7ff;
-    color: #004085;
+    background: linear-gradient(135deg, rgba(0, 188, 212, 0.2) 0%, rgba(38, 166, 154, 0.2) 100%);
+    color: #1565C0;
 }
 
 .country-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
     margin-top: 2rem;
 }
@@ -195,14 +239,16 @@ body {
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    border-top: 3px solid #26A69A;
 }
 
 .country-card:hover {
     transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(38, 166, 154, 0.15);
 }
 
 .country-flag {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
@@ -214,22 +260,37 @@ body {
 }
 
 .activity-item {
-    background: #f8f9ff;
+    background: linear-gradient(135deg, rgba(0, 188, 212, 0.1) 0%, rgba(38, 166, 154, 0.1) 100%);
     padding: 1rem;
     border-radius: 8px;
     text-align: center;
-    border-left: 4px solid #0066cc;
+    border-left: 4px solid #26A69A;
+    transition: background 0.3s ease;
+}
+
+.activity-item:hover {
+    background: linear-gradient(135deg, rgba(0, 188, 212, 0.2) 0%, rgba(38, 166, 154, 0.2) 100%);
 }
 
 .activity-icon {
     font-size: 2rem;
     margin-bottom: 0.5rem;
     display: block;
+    color: #1565C0;
 }
 
 @media (max-width: 768px) {
     .dashboard-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .header-text {
+        text-align: center;
     }
     
     .header h1 {
@@ -246,5 +307,15 @@ body {
     
     .metric-label {
         font-size: 1rem;
+    }
+    
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .logo-container {
+        flex-direction: column;
+        gap: 1rem;
     }
 }
